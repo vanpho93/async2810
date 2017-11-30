@@ -42,6 +42,7 @@ function chia(a, b, cb) {
 // });
 
 // (x + y) * z / 2
+
 function tinhDienTichHinhThang(x, y, z, cb) {
     cong(x, y, (errTong, tong) => {
         if (errTong) return cb(errTong);
