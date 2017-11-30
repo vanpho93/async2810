@@ -33,7 +33,24 @@ function chia(a, b) {
         });
     });
 }
+/*
+function tinhDienTichHinhThang(a, b, h) {
+    return cong(a, b)
+    .then(tong => nhan(tong, h))
+    .then(tich => chia(tich, 2))
+}
 
-cong(1, 2)
-.then(result => console.log(result))
+tinhDienTichHinhThang(4, 5, 12)
+.then(kq => console.log(kq))
+.catch(err => console.log(err));
+*/
+async function tinhDienTichHinhThang(a, b, h) {
+    const tong = await cong(a, b);
+    const tich = await nhan(tong, h);
+    const kq = await chia(tich, 2);
+    return kq;
+}
+
+tinhDienTichHinhThang(4, 5, 6)
+.then(kq => console.log(kq))
 .catch(err => console.log(err));
